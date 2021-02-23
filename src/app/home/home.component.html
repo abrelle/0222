@@ -1,20 +1,4 @@
 <div class="row">
-  <app-post class="col-12 col-md-6"
-    [post]="posts[0]"
-  ></app-post>
-  <app-post class="col-12 col-md-6"
-    [post]="posts[1]"
-  ></app-post>
-  <app-post class="col-12 col-md-6"
-    [post]="posts[2]"
-  ></app-post>
-  <app-post class="col-12 col-md-6"
-    [post]="posts[3]"
-  ></app-post>
-  <app-post class="col-12 col-md-6"
-    [post]="posts[4]"
-  ></app-post>
-  <app-post class="col-12 col-md-6"
-    [post]="posts[5]"
-  ></app-post>
+  <app-post *ngFor="let post of posts|async" class="col-12 col-md-6" [post] = "post">
+  </app-post>
 </div>

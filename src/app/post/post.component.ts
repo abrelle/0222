@@ -1,5 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Post} from "../shared/post";
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Post } from "../shared/post";
+import { postList } from '../shared/post-list';
 
 @Component({
   selector: 'app-post',
@@ -8,8 +9,10 @@ import {Post} from "../shared/post";
 })
 export class PostComponent implements OnInit {
   @Input() post: Post;
+  
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }
